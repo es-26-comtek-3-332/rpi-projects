@@ -5,5 +5,5 @@
 #include <stdbool.h>
 void main() {
     int students[20];
-    printf("zu", sizeof(students));
+    printf("%zu", sizeof(students));
 }
