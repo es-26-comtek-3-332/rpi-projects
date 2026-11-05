@@ -1,11 +1,9 @@
 /* TEST kode*/
 #include <stdio.h>
+#include <stdlib.h>
 
 #include <stdbool.h>
-
-int main() {
-    while (true) {
-        printf("Hello, World!\n");
-    }
-    return 0;
+void main() {
+    int students[20];
+    printf("zu", sizeof(students));
 }
