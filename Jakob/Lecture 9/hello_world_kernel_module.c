@@ -4,19 +4,20 @@
 #include <linux/kernel.h>
 #include <linux/stat.h>
 
-//Add license stuff here
+MODULE_LICENSE("GPL");
 
-//Add parameter list here
+// Add parameter list here
 
-static int __init eksempel_init(void) {
-    printk(KERN_INFO "Hellow world!\n");
+static int __init eksempel_init(void)
+{
+    printk(KERN_INFO "Hello world!\n");
     return 0;
 }
 
-static void __exit eksempel_exit(void) {
+static void __exit eksempel_exit(void)
+{
     printk(KERN_INFO "Goodbye cruel world!\n");
 }
 
 module_init(eksempel_init);
-
 module_exit(eksempel_exit);
