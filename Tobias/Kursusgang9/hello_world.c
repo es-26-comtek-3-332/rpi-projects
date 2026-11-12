@@ -9,8 +9,17 @@ MODULE_AUTHOR("Tobias N. Jensen");
 MODULE_DESCRIPTION("A simple Hello World module");
 
 // Add parameter list here
+static char mychar = 'T';
+static int myint = 22;
+MODULE_PARM_DESC(mychar, "A character");
+module_param(mychar, char, S_IRUSR);
+MODULE_PARM_DESC(myint, "An integer");
+module_param(myint, int, S_IRUSR);
+
 static int __init eksempel_init(void) {
     printk(KERN_INFO ”Hellow world !\n”);
+    printk(KERN_INFO "myini is a character: %c\n", mychar);
+    printk(KERN_INFO "myage is an integer: %d\n", myint);
     return 0;
 }
 static void __exit eksempel_exit(void) {
